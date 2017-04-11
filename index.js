@@ -39,6 +39,39 @@ function createPathProperty(one,two,three) {
 function createRequire(val) {
 	return jscodeshift("const " + val + " = " + "require(" + "'" + val + "'" + ");");
 }
+function List(name, message, choices) {
+  return ({
+    type: 'list',
+    name: name,
+    message: message,
+    choices: choices
+  });
+}
+function RawList(name, message, choices) {
+  return ({
+    type: 'rawlist',
+    name: name,
+    message: message,
+    choices: choices
+  });
+}
+
+function CheckList(name, message, choices) {
+  return ({
+    type: 'checkbox',
+    name: name,
+    message: message,
+    choices: choices
+  });
+}
+
+function Input(name, message) {
+  return ({
+  type: 'input',
+  name: name,
+  message: message
+});
+}
 
 module.exports = {
 	arrowFunction,
@@ -49,5 +82,9 @@ module.exports = {
 	parseValue,
 	commonChunksPluginCreate,
 	createPathProperty,
-	createRequire
+	createRequire,
+	List,
+	RawList,
+	CheckList,
+	Input
 };
