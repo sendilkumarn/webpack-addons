@@ -1,4 +1,6 @@
 /* eslint-disable quotes */
+const jscodeshift = require('jscodeshift');
+
 
 function arrowFunction(value) {
 	return "() => " +  "'" + value + "'";
