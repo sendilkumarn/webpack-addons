@@ -1,43 +1,41 @@
 /* eslint-disable quotes */
-const jscodeshift = require('jscodeshift');
-
 
 function arrowFunction(value) {
-	return jscodeshift("() => " +  "'" + value + "'");
+	return "() => " +  "'" + value + "'";
 }
 function regularFunction(value, funcName) {
-	return jscodeshift("function " + funcName + "() {\n return " + value + "\n}");
+	return "function " + funcName + "() {\n return " + value + "\n}";
 }
 function dynamicPromise(arr) {
 	if(Array.isArray(arr)) {
-		return jscodeshift("() => new Promise((resolve) => resolve([" + arr.map( (n) => {
+		return "() => new Promise((resolve) => resolve([" + arr.map( (n) => {
 			return "'" + n + "'";
-		}) + "]))");
+		}) + "]))";
 	} else {
-		return jscodeshift("() => new Promise((resolve) => resolve(" + "'" + arr + "'" + "))");
+		return "() => new Promise((resolve) => resolve(" + "'" + arr + "'" + "))";
 	}
 }
 function assetFilterFunction(value) {
-	return jscodeshift("function assetFilter" + "(assetFilename) {\n return assetFilename.endsWith(" +  "'" + "." + value + "'" + ");\n}");
+	return "function assetFilter" + "(assetFilename) {\n return assetFilename.endsWith(" +  "'" + "." + value + "'" + ");\n}";
 }
 function externalRegExpFunction(regexp) {
-	return jscodeshift("\n function externalRegExp(context, request, callback) {\n if ("
+	return "\n function externalRegExp(context, request, callback) {\n if ("
 	+ "/" + regexp + "/.test(request)){" + "\n" + "   return callback(null, 'commonjs ' + request);\n}\n"
-	+ "callback();\n}");
+	+ "callback();\n}";
 }
 function parseValue(regexp) {
 	return jscodeshift(regexp);
 }
 
 function commonChunksPluginCreate(value) {
-	return jscodeshift("new webpack.optimize.CommonsChunkPlugin({name:" + "'" + value + "'" + ",filename:" + "'" + value + "-[hash].min.js'})");
+	return "new webpack.optimize.CommonsChunkPlugin({name:" + "'" + value + "'" + ",filename:" + "'" + value + "-[hash].min.js'})";
 }
 function createPathProperty(one,two,three) {
-	return jscodeshift(one + '(' + two + ", '" + three + "')");
+	return one + '(' + two + ", '" + three + "')";
 }
 
 function createRequire(val) {
-	return jscodeshift("const " + val + " = " + "require(" + "'" + val + "'" + ");");
+	return "const " + val + " = " + "require(" + "'" + val + "'" + ");";
 }
 function List(name, message, choices) {
   return ({

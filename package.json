@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/webpack-contrib/webpack-addons/issues"
   },
-  "homepage": "https://github.com/webpack-contrib/webpack-addons#readme",
-  "dependencies": {
-    "jscodeshift": "^0.3.30"
-  }
+  "homepage": "https://github.com/webpack-contrib/webpack-addons#readme"
 }
