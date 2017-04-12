@@ -1,6 +1,6 @@
 {
   "name": "webpack-addons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utility suite for webpack-cli",
   "main": "index.js",
   "scripts": {
