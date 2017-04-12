@@ -5,8 +5,8 @@ const jscodeshift = require('jscodeshift');
 function arrowFunction(value) {
 	return "() => " +  "'" + value + "'";
 }
-function regularFunction(value, funcName) {
-	return "function " + funcName + "() {\n return " + value + "\n}";
+function regularFunction(value) {
+	return "function () {\n return " + value + "\n}";
 }
 function dynamicPromise(arr) {
 	if(Array.isArray(arr)) {
@@ -18,10 +18,10 @@ function dynamicPromise(arr) {
 	}
 }
 function assetFilterFunction(value) {
-	return "function assetFilter" + "(assetFilename) {\n return assetFilename.endsWith(" +  "'" + "." + value + "'" + ");\n}";
+	return "function (assetFilename) {\n return assetFilename.endsWith(" +  "'" + "." + value + "'" + ");\n}";
 }
 function externalRegExpFunction(regexp) {
-	return "\n function externalRegExp(context, request, callback) {\n if ("
+	return "\n function (context, request, callback) {\n if ("
 	+ "/" + regexp + "/.test(request)){" + "\n" + "   return callback(null, 'commonjs ' + request);\n}\n"
 	+ "callback();\n}";
 }
