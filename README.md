@@ -8,7 +8,7 @@ This is the utility suite for creating a webpack `addon`. It contains utility fu
 
 ## parseValue  
 
-Param: `node`
+Param: `String`
 
 Used when you cannot use regular conventions. Handy for examples like `RegExp` or `output.sourcePrefix`
 
