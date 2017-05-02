@@ -1,1 +1,16 @@
+# External dependencies
+
+# Mac OS X Finder
+.DS_Store
+
+# Node dependencies
 node_modules
+
+# npm-debug log
+npm-debug.*
+
+# yarn log
+yarn-error.log
+
+# Jest Coverage
+coverage

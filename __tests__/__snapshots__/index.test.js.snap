@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils arrowFunction should stringify an arrowFunction 1`] = `"() => 'app.js'"`;
+
+exports[`utils assetFilterFunction should stringify an assetFilterFunction 1`] = `
+"function (assetFilename) {
+ return assetFilename.endsWith('.js');
+}"
+`;
+
+exports[`utils commonChunksPluginCreate should stringify an commonChunksPlugin 1`] = `"new webpack.optimize.CommonsChunkPlugin({name:'vendor',filename:'vendor-[hash].min.js'})"`;
+
+exports[`utils createRequire should stringify an require statement 1`] = `"const webpack = require('webpack');"`;
+
+exports[`utils dynamicPromise should stringify an array 1`] = `"() => new Promise((resolve) => resolve(['app.js','index.js']))"`;
+
+exports[`utils dynamicPromise should stringify an single value 1`] = `"() => new Promise((resolve) => resolve('app.js'))"`;
+
+exports[`utils externalRegExpFunction should stringify an externalRegExpFunction 1`] = `
+"
+ function (context, request, callback) {
+ if (/js/.test(request)){
+   return callback(null, 'commonjs' + request);
+}
+callback();
+}"
+`;
+
+exports[`utils regularFunction should stringify an arrowFunction 1`] = `
+"function () {
+ return 'app.js'
+}"
+`;
