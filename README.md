@@ -1,5 +1,6 @@
 # webpack-addons
 
+[![Build Status](https://travis-ci.org/webpack-contrib/webpack-addons.svg?branch=master)](https://travis-ci.org/webpack-contrib/webpack-addons)
 
 This is the utility suite for creating a webpack `addon`. It contains utility functions to assist with inquirer prompting and scaffolding.
 
@@ -130,25 +131,33 @@ this.configuration.myScaffold.topScope = [createRequire('webpack')]
 Param: `name<String>, message<String>, choices<Array>`
 
 Creates a List from Inquirer
-`List('entry', 'what kind of entry do you want?', ['Array', 'Function'])`
+```js
+List('entry', 'what kind of entry do you want?', ['Array', 'Function'])
+```
 
 ### RawList 
 
 Param: `name<String>, message<String>, choices<Array>`
 
 Creates a RawList from Inquirer
-`RawList('entry', 'what kind of entry do you want?', ['Array', 'Function'])`
+```js
+RawList('entry', 'what kind of entry do you want?', ['Array', 'Function'])
+```
 
 ### CheckList
 
 Param: `name<String>, message<String>, choices<Array>`
 
 Creates a CheckList(`checkbox`) from Inquirer
-`CheckList('entry', 'what kind of entry do you want?', ['Array', 'Function'])`
+```js
+CheckList('entry', 'what kind of entry do you want?', ['Array', 'Function'])
+```
 
 ### Input 
 
 Param: `name<String>, message<String>`
 
 Creates an Input from Inquirer
-`Input('entry', 'what is your entry point?')`    
+```js
+Input('entry', 'what is your entry point?')
+```
