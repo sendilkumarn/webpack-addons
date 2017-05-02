@@ -1,13 +1,13 @@
 var jscodeshift = require('jscodeshift');
 
 
-function arrowFunction(value) {
+function createArrowFunction(value) {
 	return '() => ' +  '\'' + value + '\'';
 }
-function regularFunction(value) {
+function createRegularFunction(value) {
 	return 'function () {\n return ' + '\'' + value + '\'' + '\n}';
 }
-function dynamicPromise(arr) {
+function createDynamicPromise(arr) {
 	if(Array.isArray(arr)) {
 		return '() => new Promise((resolve) => resolve([' + arr.map( (n) => {
 			return '\'' + n + '\'';
@@ -16,10 +16,10 @@ function dynamicPromise(arr) {
 		return '() => new Promise((resolve) => resolve(' + '\'' + arr + '\'' + '))';
 	}
 }
-function assetFilterFunction(value) {
+function createAssetFilterFunction(value) {
 	return 'function (assetFilename) {\n return assetFilename.endsWith(' +  '\'' + '.' + value + '\'' + ');\n}';
 }
-function externalRegExpFunction(regexp) {
+function createExternalFunction(regexp) {
 	return '\n function (context, request, callback) {\n if ('
 	+ '/' + regexp + '/.test(request)){' + '\n' + '   return callback(null, \'commonjs\' + request);\n}\n'
 	+ 'callback();\n}';
@@ -28,7 +28,7 @@ function parseValue(regexp) {
 	return jscodeshift(regexp);
 }
 
-function commonChunksPluginCreate(value) {
+function createCommonsChunkPlugin(value) {
 	return 'new webpack.optimize.CommonsChunkPlugin({name:' + '\'' + value + '\'' + ',filename:' + '\'' + value + '\-[hash].min.js\'})';
 }
 function createRequire(val) {
@@ -69,13 +69,13 @@ function Input(name, message) {
 }
 
 module.exports = {
-	arrowFunction,
-	dynamicPromise,
-	regularFunction,
-	assetFilterFunction,
-	externalRegExpFunction,
+	createArrowFunction,
+	createDynamicPromise,
+	createRegularFunction,
+	createAssetFilterFunction,
+	createExternalFunction,
 	parseValue,
-	commonChunksPluginCreate,
+	createCommonsChunkPlugin,
 	createRequire,
 	List,
 	RawList,

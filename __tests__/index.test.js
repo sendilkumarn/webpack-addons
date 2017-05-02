@@ -2,37 +2,37 @@
 const utils = require('../index');
 
 describe('utils', () => {
-	describe('arrowFunction', () => {
-		it('should stringify an arrowFunction', () => {
-			expect(utils.arrowFunction('app.js')).toMatchSnapshot();
+	describe('createArrowFunction', () => {
+		it('should stringify an arrow function', () => {
+			expect(utils.createArrowFunction('app.js')).toMatchSnapshot();
 		});
 	});
-	describe('regularFunction', () => {
-		it('should stringify an arrowFunction', () => {
-			expect(utils.regularFunction('app.js')).toMatchSnapshot();
+	describe('createRegularFunction', () => {
+		it('should stringify an regular function', () => {
+			expect(utils.createRegularFunction('app.js')).toMatchSnapshot();
 		});
 	});
-	describe('dynamicPromise', () => {
+	describe('createDynamicPromise', () => {
 		it('should stringify an single value', () => {
-			expect(utils.dynamicPromise('app.js')).toMatchSnapshot();
+			expect(utils.createDynamicPromise('app.js')).toMatchSnapshot();
 		});
 		it('should stringify an array', () => {
-			expect(utils.dynamicPromise(['app.js', 'index.js'])).toMatchSnapshot();
+			expect(utils.createDynamicPromise(['app.js', 'index.js'])).toMatchSnapshot();
 		});
 	});
-	describe('assetFilterFunction', () => {
+	describe('createAssetFilterFunction', () => {
 		it('should stringify an assetFilterFunction', () => {
-			expect(utils.assetFilterFunction('js')).toMatchSnapshot();
+			expect(utils.createAssetFilterFunction('js')).toMatchSnapshot();
 		});
 	});
-	describe('externalRegExpFunction', () => {
-		it('should stringify an externalRegExpFunction', () => {
-			expect(utils.externalRegExpFunction('js')).toMatchSnapshot();
+	describe('createExternalFunction', () => {
+		it('should stringify an ExternalFunction', () => {
+			expect(utils.createExternalFunction('js')).toMatchSnapshot();
 		});
 	});
-	describe('commonChunksPluginCreate', () => {
+	describe('createCommonsChunkPlugin', () => {
 		it('should stringify an commonChunksPlugin', () => {
-			expect(utils.commonChunksPluginCreate('vendor')).toMatchSnapshot();
+			expect(utils.createCommonsChunkPlugin('vendor')).toMatchSnapshot();
 		});
 	});
 	describe('createRequire', () => {
