@@ -161,3 +161,19 @@ Creates an Input from Inquirer
 ```js
 Input('entry', 'what is your entry point?')
 ```
+
+### InputValidate
+
+Param: `name<String>, message<String>, validate<Function>`
+
+Creates an Input from Inquirer
+```js
+const validation = (value) => {
+    if(value.length > 4) {
+        return true;
+    } else {
+        return 'Wow, that was short!'
+    }
+}
+Input('entry', 'what is your entry point?', validation)
+```
