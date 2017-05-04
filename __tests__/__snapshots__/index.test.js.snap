@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`utils Inquirer should make an Input object with validation 1`] = `
+Object {
+  "message": "what is your plugin?",
+  "name": "plugins",
+  "type": "input",
+  "validate": [Function],
+}
+`;
+
 exports[`utils createArrowFunction should stringify an arrow function 1`] = `"() => 'app.js'"`;
 
 exports[`utils createAssetFilterFunction should stringify an assetFilterFunction 1`] = `

@@ -72,5 +72,10 @@ describe('utils', () => {
 				message: 'what is your plugin?'
 			});
 		});
+		it('should make an Input object with validation', () => {
+			expect(
+				utils.InputValidate('plugins', 'what is your plugin?', () => {})
+			).toMatchSnapshot();
+		});
 	});
 });
