@@ -177,3 +177,12 @@ const validation = (value) => {
 }
 Input('entry', 'what is your entry point?', validation)
 ```
+
+### Confirm
+
+Param: `name<String>, message<String>`
+
+Creates an Input from Inquirer
+```js
+Confirm('contextConfirm', 'Is this your context?')
+```

@@ -72,6 +72,13 @@ describe('utils', () => {
 				message: 'what is your plugin?'
 			});
 		});
+		it('should make an Confirm object', () => {
+			expect(utils.Confirm('context', 'what is your context?')).toEqual({
+				type: 'confirm',
+				name: 'context',
+				message: 'what is your context?'
+			});
+		});
 		it('should make an Input object with validation', () => {
 			expect(
 				utils.InputValidate('plugins', 'what is your plugin?', () => {})

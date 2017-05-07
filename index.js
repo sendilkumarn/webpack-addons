@@ -76,6 +76,15 @@ function InputValidate(name, message, cb) {
 		validate: cb
 	});
 }
+
+function Confirm(name, message) {
+	return ({
+		type: 'confirm',
+		name: name,
+		message: message,
+	});
+}
+
 module.exports = {
 	createArrowFunction,
 	createDynamicPromise,
@@ -89,5 +98,6 @@ module.exports = {
 	RawList,
 	CheckList,
 	Input,
-	InputValidate
+	InputValidate,
+	Confirm
 };
