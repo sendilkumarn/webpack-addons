@@ -1,5 +1,3 @@
-
-
 const WebpackGenerator = require('./lib/yeoman/webpack-generator');
 const initTransform = require('./lib/init/index');
 
