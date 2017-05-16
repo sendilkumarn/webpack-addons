@@ -1,6 +1,10 @@
 
 
 const WebpackGenerator = require('./lib/yeoman/webpack-generator');
+const initTransform = require('./lib/init/index');
+
+const migrateTransform = require('./lib/migrate/index');
+
 const createArrowFunction = require('./lib/inquirer/index').createArrowFunction;
 const createDynamicPromise = require('./lib/inquirer/index').createDynamicPromise;
 const createRegularFunction = require('./lib/inquirer/index').createRegularFunction;
@@ -31,5 +35,7 @@ module.exports = {
 	Input,
 	InputValidate,
 	Confirm,
-	WebpackGenerator
+	WebpackGenerator,
+	initTransform,
+	migrateTransform
 };
