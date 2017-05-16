@@ -1,89 +1,20 @@
-var jscodeshift = require('jscodeshift');
-var WebpackGenerator = require('./lib/init/webpack-generator');
 
-function createArrowFunction(value) {
-	return '() => ' +  '\'' + value + '\'';
-}
-function createRegularFunction(value) {
-	return 'function () {\n return ' + '\'' + value + '\'' + '\n}';
-}
-function createDynamicPromise(arr) {
-	if(Array.isArray(arr)) {
-		return '() => new Promise((resolve) => resolve([' + arr.map( (n) => {
-			return '\'' + n + '\'';
-		}) + ']))';
-	} else {
-		return '() => new Promise((resolve) => resolve(' + '\'' + arr + '\'' + '))';
-	}
-}
-function createAssetFilterFunction(value) {
-	return 'function (assetFilename) {\n return assetFilename.endsWith(' +  '\'' + '.' + value + '\'' + ');\n}';
-}
-function createExternalFunction(regexp) {
-	return '\n function (context, request, callback) {\n if ('
-	+ '/' + regexp + '/.test(request)){' + '\n' + '   return callback(null, \'commonjs\' + request);\n}\n'
-	+ 'callback();\n}';
-}
-function parseValue(regexp) {
-	return jscodeshift(regexp);
-}
 
-function createCommonsChunkPlugin(value) {
-	return 'new webpack.optimize.CommonsChunkPlugin({name:' + '\'' + value + '\'' + ',filename:' + '\'' + value + '\-[hash].min.js\'})';
-}
-function createRequire(val) {
-	return 'const ' + val + ' = ' + 'require(' + '\'' + val + '\'' + ');';
-}
-function List(name, message, choices) {
-	return ({
-		type: 'list',
-		name: name,
-		message: message,
-		choices: choices
-	});
-}
-function RawList(name, message, choices) {
-	return ({
-		type: 'rawlist',
-		name: name,
-		message: message,
-		choices: choices
-	});
-}
-
-function CheckList(name, message, choices) {
-	return ({
-		type: 'checkbox',
-		name: name,
-		message: message,
-		choices: choices
-	});
-}
-
-function Input(name, message) {
-	return ({
-		type: 'input',
-		name: name,
-		message: message
-	});
-}
-
-function InputValidate(name, message, cb) {
-	return ({
-		type: 'input',
-		name: name,
-		message: message,
-		validate: cb
-	});
-}
-
-function Confirm(name, message) {
-	return ({
-		type: 'confirm',
-		name: name,
-		message: message,
-	});
-}
+const WebpackGenerator = require('./lib/init/webpack-generator');
+const createArrowFunction = require('./lib/inquirer/index').createArrowFunction;
+const createDynamicPromise = require('./lib/inquirer/index').createDynamicPromise;
+const createRegularFunction = require('./lib/inquirer/index').createRegularFunction;
+const createAssetFilterFunction = require('./lib/inquirer/index').createAssetFilterFunction;
+const createExternalFunction = require('./lib/inquirer/index').createExternalFunction;
+const parseValue = require('./lib/inquirer/index').parseValue;
+const createCommonsChunkPlugin = require('./lib/inquirer/index').createCommonsChunkPlugin;
+const createRequire = require('./lib/inquirer/index').createRequire;
+const List = require('./lib/inquirer/index').List;
+const RawList = require('./lib/inquirer/index').RawList;
+const CheckList = require('./lib/inquirer/index').CheckList;
+const Input = require('./lib/inquirer/index').Input;
+const InputValidate = require('./lib/inquirer/index').InputValidate;
+const Confirm = require('./lib/inquirer/index').Confirm;
 
 module.exports = {
 	createArrowFunction,
