@@ -1,6 +1,6 @@
 
 
-const WebpackGenerator = require('./lib/init/webpack-generator');
+const WebpackGenerator = require('./lib/yeoman/webpack-generator');
 const createArrowFunction = require('./lib/inquirer/index').createArrowFunction;
 const createDynamicPromise = require('./lib/inquirer/index').createDynamicPromise;
 const createRegularFunction = require('./lib/inquirer/index').createRegularFunction;
