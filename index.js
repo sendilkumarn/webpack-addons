@@ -1,6 +1,5 @@
 const WebpackGenerator = require('./lib/yeoman/webpack-generator');
 const initTransform = require('./lib/init/index');
-
 const migrateTransform = require('./lib/migrate/migrate');
 
 const createArrowFunction = require('./lib/inquirer/index').createArrowFunction;

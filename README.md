@@ -6,6 +6,18 @@ This is the utility suite for creating a webpack `addon`. It contains utility fu
 
 # API
 
+## WebpackGenerator
+
+The init webpack generator. Useful for extending a scaffold with basic information, such as asking for entry points without having to do that yourself.
+
+## initTransform
+
+Runs the transform rules for `webpack-cli init`, which only accepts a `this.configuration` object from a yeoman-generator.
+
+## migrateTransform
+
+Runs the migrate prompt. See `webpack-cli migrate`
+
 ## parseValue  
 
 Param: `String`
