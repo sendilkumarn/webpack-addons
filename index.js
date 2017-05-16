@@ -1,5 +1,5 @@
 var jscodeshift = require('jscodeshift');
-
+var WebpackGenerator = require('./lib/init/webpack-generator');
 
 function createArrowFunction(value) {
 	return '() => ' +  '\'' + value + '\'';
@@ -99,5 +99,6 @@ module.exports = {
 	CheckList,
 	Input,
 	InputValidate,
-	Confirm
+	Confirm,
+	WebpackGenerator
 };
