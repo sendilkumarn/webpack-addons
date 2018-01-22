@@ -10,11 +10,11 @@ function createRegularFunction(value) {
 
 function createDynamicPromise(arr) {
 	if(Array.isArray(arr)) {
-		return `() => new Promise((resolve) => resolve([${arr.map( (n) => {
-    	return '\'' + n + '\'';
-		})}]))`;
+		return '() => new Promise((resolve) => resolve([' + arr.map( (n) => {
+			return '\'' + n + '\'';
+		}) + ']))';
 	} else {
-		return `() => new Promise((resolve) => resolve('${arr}'))`;
+		return '() => new Promise((resolve) => resolve(' + '\'' + arr + '\'' + '))';
 	}
 }
 
@@ -23,7 +23,9 @@ function createAssetFilterFunction(value) {
 }
 
 function createExternalFunction(regexp) {
-	return `\n function (context, request, callback) {\n if (/${regexp}/.test(request)){\n   return callback(null, 'commonjs' + request);\n}\ncallback();\n}`;
+	return '\n function (context, request, callback) {\n if ('
+	+ '/' + regexp + '/.test(request)){' + '\n' + '   return callback(null, \'commonjs\' + request);\n}\n'
+	+ 'callback();\n}';
 }
 
 function parseValue(regexp) {
