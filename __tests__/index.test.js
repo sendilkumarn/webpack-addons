@@ -25,6 +25,11 @@ describe('utils', () => {
 			expect(utils.createAssetFilterFunction('js')).toMatchSnapshot();
 		});
 	});
+	describe('parseValue', () => {
+		it('should parse value an require statement', () => {
+			expect(utils.parseValue('test;test')).toMatchSnapshot();
+		});
+	});
 	describe('createExternalFunction', () => {
 		it('should stringify an ExternalFunction', () => {
 			expect(utils.createExternalFunction('js')).toMatchSnapshot();
