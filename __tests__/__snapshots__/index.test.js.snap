@@ -49,10 +49,10 @@ Collection {
       "name": null,
       "parentPath": null,
       "value": Node {
-        "end": 9,
+        "end": 4,
         "loc": SourceLocation {
           "end": Object {
-            "column": 9,
+            "column": 4,
             "line": 1,
           },
           "indent": 0,
@@ -63,11 +63,11 @@ Collection {
               "cachedSourceMap": null,
               "infos": Array [
                 Object {
-                  "indent": 0,
-                  "line": "test;test",
+                  "indent": 4,
+                  "line": "	",
                   "locked": false,
-                  "sliceEnd": 9,
-                  "sliceStart": 0,
+                  "sliceEnd": 1,
+                  "sliceStart": 1,
                 },
               ],
               "mappings": Array [],
@@ -80,152 +80,11 @@ Collection {
           },
         },
         "program": Node {
-          "body": Array [
-            Node {
-              "end": 5,
-              "expression": Node {
-                "end": 4,
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 4,
-                    "line": 1,
-                  },
-                  "identifierName": "test",
-                  "indent": 0,
-                  "lines": Lines {
-                    "length": 1,
-                    "name": null,
-                    Symbol(recastLinesSecret): Object {
-                      "cachedSourceMap": null,
-                      "infos": Array [
-                        Object {
-                          "indent": 0,
-                          "line": "test;test",
-                          "locked": false,
-                          "sliceEnd": 9,
-                          "sliceStart": 0,
-                        },
-                      ],
-                      "mappings": Array [],
-                      "name": null,
-                    },
-                  },
-                  "start": Position {
-                    "column": 0,
-                    "line": 1,
-                  },
-                },
-                "name": "test",
-                "start": 0,
-                "type": "Identifier",
-              },
-              "loc": SourceLocation {
-                "end": Position {
-                  "column": 5,
-                  "line": 1,
-                },
-                "indent": 0,
-                "lines": Lines {
-                  "length": 1,
-                  "name": null,
-                  Symbol(recastLinesSecret): Object {
-                    "cachedSourceMap": null,
-                    "infos": Array [
-                      Object {
-                        "indent": 0,
-                        "line": "test;test",
-                        "locked": false,
-                        "sliceEnd": 9,
-                        "sliceStart": 0,
-                      },
-                    ],
-                    "mappings": Array [],
-                    "name": null,
-                  },
-                },
-                "start": Position {
-                  "column": 0,
-                  "line": 1,
-                },
-              },
-              "start": 0,
-              "type": "ExpressionStatement",
-            },
-            Node {
-              "end": 9,
-              "expression": Node {
-                "end": 9,
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 9,
-                    "line": 1,
-                  },
-                  "identifierName": "test",
-                  "indent": 0,
-                  "lines": Lines {
-                    "length": 1,
-                    "name": null,
-                    Symbol(recastLinesSecret): Object {
-                      "cachedSourceMap": null,
-                      "infos": Array [
-                        Object {
-                          "indent": 0,
-                          "line": "test;test",
-                          "locked": false,
-                          "sliceEnd": 9,
-                          "sliceStart": 0,
-                        },
-                      ],
-                      "mappings": Array [],
-                      "name": null,
-                    },
-                  },
-                  "start": Position {
-                    "column": 5,
-                    "line": 1,
-                  },
-                },
-                "name": "test",
-                "start": 5,
-                "type": "Identifier",
-              },
-              "loc": SourceLocation {
-                "end": Position {
-                  "column": 9,
-                  "line": 1,
-                },
-                "indent": 0,
-                "lines": Lines {
-                  "length": 1,
-                  "name": null,
-                  Symbol(recastLinesSecret): Object {
-                    "cachedSourceMap": null,
-                    "infos": Array [
-                      Object {
-                        "indent": 0,
-                        "line": "test;test",
-                        "locked": false,
-                        "sliceEnd": 9,
-                        "sliceStart": 0,
-                      },
-                    ],
-                    "mappings": Array [],
-                    "name": null,
-                  },
-                },
-                "start": Position {
-                  "column": 5,
-                  "line": 1,
-                },
-              },
-              "start": 5,
-              "type": "ExpressionStatement",
-            },
-          ],
-          "end": 9,
+          "body": Array [],
+          "end": 4,
           "loc": SourceLocation {
             "end": Position {
-              "column": 9,
+              "column": 4,
               "line": 1,
             },
             "indent": 0,
@@ -236,11 +95,11 @@ Collection {
                 "cachedSourceMap": null,
                 "infos": Array [
                   Object {
-                    "indent": 0,
-                    "line": "test;test",
+                    "indent": 4,
+                    "line": "	",
                     "locked": false,
-                    "sliceEnd": 9,
-                    "sliceStart": 0,
+                    "sliceEnd": 1,
+                    "sliceStart": 1,
                   },
                 ],
                 "mappings": Array [],
@@ -266,95 +125,11 @@ Collection {
                 "line": 1,
               },
               "start": Position {
-                "column": 0,
-                "line": 1,
-              },
-            },
-            "start": 0,
-            "type": TokenType {
-              "beforeExpr": false,
-              "binop": null,
-              "isAssign": false,
-              "isLoop": false,
-              "keyword": undefined,
-              "label": "name",
-              "postfix": false,
-              "prefix": false,
-              "rightAssociative": false,
-              "startsExpr": true,
-              "updateContext": [Function],
-            },
-            "value": "test",
-          },
-          Token {
-            "end": 5,
-            "loc": SourceLocation {
-              "end": Position {
-                "column": 5,
-                "line": 1,
-              },
-              "start": Position {
                 "column": 4,
                 "line": 1,
               },
             },
             "start": 4,
-            "type": TokenType {
-              "beforeExpr": true,
-              "binop": null,
-              "isAssign": false,
-              "isLoop": false,
-              "keyword": undefined,
-              "label": ";",
-              "postfix": false,
-              "prefix": false,
-              "rightAssociative": false,
-              "startsExpr": false,
-              "updateContext": null,
-            },
-            "value": undefined,
-          },
-          Token {
-            "end": 9,
-            "loc": SourceLocation {
-              "end": Position {
-                "column": 9,
-                "line": 1,
-              },
-              "start": Position {
-                "column": 5,
-                "line": 1,
-              },
-            },
-            "start": 5,
-            "type": TokenType {
-              "beforeExpr": false,
-              "binop": null,
-              "isAssign": false,
-              "isLoop": false,
-              "keyword": undefined,
-              "label": "name",
-              "postfix": false,
-              "prefix": false,
-              "rightAssociative": false,
-              "startsExpr": true,
-              "updateContext": [Function],
-            },
-            "value": "test",
-          },
-          Token {
-            "end": 9,
-            "loc": SourceLocation {
-              "end": Position {
-                "column": 9,
-                "line": 1,
-              },
-              "start": Position {
-                "column": 9,
-                "line": 1,
-              },
-            },
-            "start": 9,
             "type": TokenType {
               "beforeExpr": false,
               "binop": null,

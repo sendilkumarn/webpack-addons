@@ -27,7 +27,7 @@ describe('utils', () => {
 	});
 	describe('parseValue', () => {
 		it('should parse value an require statement', () => {
-			expect(utils.parseValue('test;test')).toMatchSnapshot();
+			expect(utils.parseValue('\t')).toMatchSnapshot();
 		});
 	});
 	describe('createExternalFunction', () => {
