@@ -26,8 +26,11 @@ describe('utils', () => {
 		});
 	});
 	describe('parseValue', () => {
-		it('should parse value an require statement', () => {
+		it('should parse value', () => {
 			expect(utils.parseValue('\t')).toMatchSnapshot();
+		});
+		it('should parse value with raw value', () => {
+			expect(utils.parseValue('hell\u{6F}')).toMatchSnapshot();
 		});
 	});
 	describe('createExternalFunction', () => {
