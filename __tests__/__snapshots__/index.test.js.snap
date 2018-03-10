@@ -87,7 +87,7 @@ Collection {
               "column": 4,
               "line": 1,
             },
-            "indent": 0,
+            "indent": 4,
             "lines": Lines {
               "length": 1,
               "name": null,
@@ -106,8 +106,8 @@ Collection {
                 "name": null,
               },
             },
-            "start": Position {
-              "column": 0,
+            "start": Object {
+              "column": 4,
               "line": 1,
             },
           },
@@ -116,36 +116,6 @@ Collection {
           "type": "Program",
         },
         "start": 0,
-        "tokens": Array [
-          Token {
-            "end": 4,
-            "loc": SourceLocation {
-              "end": Position {
-                "column": 4,
-                "line": 1,
-              },
-              "start": Position {
-                "column": 4,
-                "line": 1,
-              },
-            },
-            "start": 4,
-            "type": TokenType {
-              "beforeExpr": false,
-              "binop": null,
-              "isAssign": false,
-              "isLoop": false,
-              "keyword": undefined,
-              "label": "eof",
-              "postfix": false,
-              "prefix": false,
-              "rightAssociative": false,
-              "startsExpr": false,
-              "updateContext": null,
-            },
-            "value": undefined,
-          },
-        ],
         "type": "File",
       },
     },
@@ -272,7 +242,7 @@ Collection {
           ],
           "end": 5,
           "loc": SourceLocation {
-            "end": Position {
+            "end": Object {
               "column": 5,
               "line": 1,
             },
@@ -295,7 +265,7 @@ Collection {
                 "name": null,
               },
             },
-            "start": Position {
+            "start": Object {
               "column": 0,
               "line": 1,
             },
@@ -305,64 +275,6 @@ Collection {
           "type": "Program",
         },
         "start": 0,
-        "tokens": Array [
-          Token {
-            "end": 5,
-            "loc": SourceLocation {
-              "end": Position {
-                "column": 5,
-                "line": 1,
-              },
-              "start": Position {
-                "column": 0,
-                "line": 1,
-              },
-            },
-            "start": 0,
-            "type": TokenType {
-              "beforeExpr": false,
-              "binop": null,
-              "isAssign": false,
-              "isLoop": false,
-              "keyword": undefined,
-              "label": "name",
-              "postfix": false,
-              "prefix": false,
-              "rightAssociative": false,
-              "startsExpr": true,
-              "updateContext": [Function],
-            },
-            "value": "hello",
-          },
-          Token {
-            "end": 5,
-            "loc": SourceLocation {
-              "end": Position {
-                "column": 5,
-                "line": 1,
-              },
-              "start": Position {
-                "column": 5,
-                "line": 1,
-              },
-            },
-            "start": 5,
-            "type": TokenType {
-              "beforeExpr": false,
-              "binop": null,
-              "isAssign": false,
-              "isLoop": false,
-              "keyword": undefined,
-              "label": "eof",
-              "postfix": false,
-              "prefix": false,
-              "rightAssociative": false,
-              "startsExpr": false,
-              "updateContext": null,
-            },
-            "value": undefined,
-          },
-        ],
         "type": "File",
       },
     },
