@@ -25,6 +25,14 @@ describe('utils', () => {
 			expect(utils.createAssetFilterFunction('js')).toMatchSnapshot();
 		});
 	});
+	describe('parseValue', () => {
+		it('should parse value', () => {
+			expect(utils.parseValue('\t')).toMatchSnapshot();
+		});
+		it('should parse value with raw value', () => {
+			expect(utils.parseValue('hell\u{6F}')).toMatchSnapshot();
+		});
+	});
 	describe('createExternalFunction', () => {
 		it('should stringify an ExternalFunction', () => {
 			expect(utils.createExternalFunction('js')).toMatchSnapshot();

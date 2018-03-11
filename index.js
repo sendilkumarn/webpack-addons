@@ -33,7 +33,7 @@ function parseValue(regexp) {
 }
 
 function createCommonsChunkPlugin(value) {
-	return `new webpack.optimize.CommonsChunkPlugin({name:'${value}',filename:'${value}\-[hash].min.js'})`;
+	return `new webpack.optimize.CommonsChunkPlugin({name:'${value}',filename:'${value}-[hash].min.js'})`;
 }
 
 function createRequire(val) {
